@@ -976,8 +976,6 @@ class HermesTemplate_3D(Function3D, metaclass=FunctionMeta):
             h.update(repr(self._wcs).encode("utf-8"))
             self.hash = int(h.hexdigest(), 16)
 
-        else:
-            raise RuntimeError("The fits file is not suitable for the class.")
 
     def evaluate(self, x, y, z, K, hash, ihdu):
 
@@ -1001,7 +999,7 @@ class HermesTemplate_3D(Function3D, metaclass=FunctionMeta):
             shift = np.where(lon > 180.)
             lon[shift] = 180 - lon[shift]
 
-           for i in range(energy.size):
+            for i in range(energy.size):
                 e = np.repeat(energy[i], len(lon))
                 f[:, i] = self._F(np.array([e, lat, lon]).T)
 
