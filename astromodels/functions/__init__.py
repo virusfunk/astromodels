@@ -74,6 +74,7 @@ from .functions_3D import (
     Continuous_injection_diffusion_ellipse,
     Continuous_injection_diffusion_legacy,
     GalPropTemplate_3D,
+    HermesTemplate_3D,
 )
 from .priors import (
     Cauchy,
@@ -127,6 +128,7 @@ __all__ = [
     "Continuous_injection_diffusion_ellipse",
     "Continuous_injection_diffusion_legacy",
     "GalPropTemplate_3D",
+    "HermesTemplate_3D",
     "DMSpectra",
     "DMFitFunction",
     "Cauchy",
